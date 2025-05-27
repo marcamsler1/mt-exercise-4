@@ -16,7 +16,7 @@ data:
         voc_limit: null
         # or (= not both!) a file with a vocabulary built before starting the training:
         voc_file : "subword_models/5k/bpe_5k.joint_vocab"
-        tokenizer_type: "bpe"
+        tokenizer_type: "subword-nmt"
         tokenizer_cfg:
             codes: "subword_models/5k/bpe_5k.codes"
     trg: 
@@ -28,7 +28,7 @@ data:
         voc_limit: null
         # or (= not both!) a file with a vocabulary built before starting the training:
         voc_file : "subword_models/5k/bpe_5k.joint_vocab"
-        tokenizer_type: "bpe"
+        tokenizer_type: "subword-nmt"
         tokenizer_cfg:
             codes: "subword_models/5k/bpe_5k.codes"
 
