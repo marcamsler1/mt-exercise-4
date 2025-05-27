@@ -12,8 +12,6 @@ data:
         level: "bpe"
         lowercase: False
         max_sent_length: 100
-        # either use a vocabulary limit:
-        voc_limit: null
         # or (= not both!) a file with a vocabulary built before starting the training:
         voc_file : "subword_models/5k/bpe_5k.joint_vocab"
         tokenizer_type: "subword-nmt"
