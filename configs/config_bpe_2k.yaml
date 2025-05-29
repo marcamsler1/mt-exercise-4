@@ -4,7 +4,7 @@ joeynmt_version: "2.0.0"
 
 data:
     train: "data/unprocessed/train.de-it"
-    dev:   "data/unprocessed/dev-de-it"
+    dev:   "data/unprocessed/dev.de-it"
     test:  "data/unprocessed/test.de-it"
     dataset_type: "plain"
     src:
