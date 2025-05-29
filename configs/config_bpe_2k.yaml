@@ -3,9 +3,9 @@ joeynmt_version: "2.0.0"
 
 
 data:
-    train: "data/bpe_2k/train.bpe"
-    dev:   "data/bpe_2k/dev.bpe"
-    test:  "data/bpe_2k/test.bpe"
+    train: "data/unprocessed/train.de-it"
+    dev:   "data/unprocessed/dev-de-it"
+    test:  "data/unprocessed/test.de-it"
     dataset_type: "plain"
     src:
         lang: "de"
