@@ -31,7 +31,6 @@ data:
 testing:
     beam_size: 1
     beam_alpha: 1.0
-    output_path: "beam_eval_results/hyp_beam1.txt"
 
 training:
     random_seed: 42
