@@ -9,7 +9,7 @@ for beam in 1 2 3 5 10 15 20 25; do
     echo "Beam size $beam..."
     CONFIG_FILE="${CONFIG_PREFIX}${beam}.yaml"
     
-    echo CONFIG_FILE
+    echo "$CONFIG_FILE"
 
     if [ ! -f "$CONFIG_FILE" ]; then
         echo "❌ Config file $CONFIG_FILE not found. Skipping..."
