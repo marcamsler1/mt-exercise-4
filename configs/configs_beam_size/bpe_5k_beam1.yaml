@@ -29,6 +29,7 @@ data:
             codes: "subword_models/5k/bpe_5k.codes"
 
 testing:
+    test: "data/unprocessed/test.de-it"
     beam_size: 1
     alpha: 1.0
 
