@@ -1,5 +1,7 @@
 # Exercise 1:
 
+This exercise was solved by Marc Amsler (marctfamsler, 22-726-206) and Nicolas Burgener (niburg, 23-718-927).
+
 We trained a model that used a word-level tokenizer and a model that used BPE-Tokenization with a vocabulary size of 2000. We then wanted to see how much of a positive impact on translation quality a larger vocabulary has and trained the third model using BPE-Tokenization with a vocabulary size of 5000. These are the results:
 
 
@@ -27,6 +29,15 @@ Bpe-2k model: While these translations have a similar bleu-score to the word-lev
 Bpe-5k model: These predictions have the best bleu score out of the three models. In our opinion, they look pretty similar to the bpe-5k model predictions. There are a few minor differencees in word-choice and sentence structure, but due to our limited knowledge of italian we can't really say which one is better. ChatGPT however says that this is the best of the three models, with mostly fluent sentences, better grammar and less repetition. The model is still not perfect though, with it still generating a few odd expressions. 
 
 So in general, our expectations were met and while a model using BPE-Tokenization produced better than a model using word-level tokenization, a vocabulary size of 2000 was too small and the translation quality improved by increasing the vocabulary size to 5000.
+
+
+# Exercise 2:
+We had a lot of trouble with generating the translations using different beam sizes. In the end, we printed the evaluation scores and times to the terminal and copied the terminal output to beam_eval_results/evaluation_terminal_output.txt file. From there, we extracted the values by hand and wrote them to the python file which generated the plots.
+
+![bleu_scores](https://github.com/user-attachments/assets/7756a163-68a8-4234-a8e7-2fa2eca2f414)
+![time_taken](https://github.com/user-attachments/assets/17b7b667-5bfb-48b8-bf3d-5f514d4e7bef)
+
+The BLEU-Score for a beam-size of 1 is not that good in comparison to others, because it's greedy decoding. The impact of making the beam size to 2 is huge, and this beam size leads to the best BLEU scores. In addition to this, the time taken for decoding is also the lowest at a beam size of 2. We were a bit surprised that beam sizes of 3, 4 and 5 gradually got a lower BLEU score, since we initially thought that one of those beam sizes would lead to the best score. From there on, the quality of translations further decreased with a higher beam size. At a beam size of 20, we get a similar BLEU score to a beam size of one and increasing the beam size even further just decreases translation quality even more. The time taken for decoding also increases linearly with a higher beam size, so no surprises there.
 
 
 
