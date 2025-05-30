@@ -17,7 +17,7 @@ for beam in 1 2 3 5 10 15 20 25; do
     fi
 
     start=$(date +%s)
-    python -m joeynmt translate "$CONFIG_FILE"
+    python -m joeynmt test "$CONFIG_FILE"
     end=$(date +%s)
 
     OUTFILE="$OUTDIR/hyp_beam${beam}.txt"
