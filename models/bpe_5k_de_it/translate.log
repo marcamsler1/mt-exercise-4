@@ -1,0 +1,6 @@
+2025-05-30 11:40:49,970 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 11:40:50,216 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 11:40:50,364 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 11:40:50,466 - INFO - joeynmt.helpers - Load model from C:\Users\marca\mt-vocab-experiment\mt-exercise-4\models\bpe_5k_de_it\best.ckpt.
+2025-05-30 11:40:50,486 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 11:40:50,486 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
