@@ -1,3 +1,36 @@
+# Exercise 1:
+
+We trained a model that used a word-level tokenizer and a model that used BPE-Tokenization with a vocabulary size of 2000. We then wanted to see how much of a positive impact on translation quality a larger vocabulary has and trained the third model using BPE-Tokenization with a vocabulary size of 5000. These are the results:
+
+
+|       |  use BPE  | vocabulary size | BLEU |
+|:------|:---------:|----------------:|-----:|
+| (a)   | no        | 2000            | 8.5  |
+| (b)   | yes       | 2000            | 8.9  |
+| (c)   | yes       | 5000            | 10.7 |
+
+According to the bleu score results, the model that used bpe with a vocab size of 5k was the best. This is also our opinion after taking a closer look at the translations themselves.
+
+We can only speak a little bit of italian, so our conclusions are only based on this little bit of language knowledge and the comparisons to the reference translations.
+
+In general, the word_level model produced a lot of unk tokens. We expected this, because we only used a vocabulary size of 2k and if we have rather uncommon words appearing in the test data, the model doesn't know them and produces an unk token. In total, the word_level model produced 6161 unk tokens. The model that use bpe also have some unk tokens, but a lot less. The bpe_2k model produced 783 unk tokens in the test data, the bpe_5k model produced 949 unk tokens. So for both bpe models, we reduced the amount of generated unk tokens by at least 6 times.
+We don't know however, how the bpe model with a vocabulary of 2k produced less unk tokens than the one with a vocabulary of 5k. According to the logic of the bpe-algorithm, this should be the other way around and we can't explain how this happened.
+
+Example: Less often occuring words, like „marshmallow“ were translated correctly by both BPE models, while the word level model just produced an <unk> token. Aligns with our expectations, since "marshmallow" probably didn't make it into the 2k word_level vocabulary, while it could be reconstructed from subword tokens in the bpe translations. 
+
+For the following analysis, we used ChatGPT, as well as our own limited knowledge of the italian language.
+
+Word-level model: The translation quality is very bad. While the bleu score is still comparable to the bpe_2k model, the translations aren't very fluent, sometimes incomplete and the amount of <unk> tokens make them nearly impossible to be of use. However, ChatGPT says that the model managed to generate a few small fragments of correct syntax. In our opinion, the bleu score for this model is not meaningful, because the <unk> tokens don't influence the bleu-score too much, but they hurt the translation quality a lot.
+
+Bpe-2k model: While these translations have a similar bleu-score to the word-level model predictions, the translations are of a far better quality (ChatGPT also backs this up). There are far fewer <unk> tokens and in our humble opinion, the translations seem understandable. ChatGPT says that the grammar and syntax of the translations are better. The model creates some fluent and correct phrases, which also have a correct sentence structure. However, there is still repetition and hallucination, with some incorrect grammar in the translations. Overall, the translation quality is still not very good, but it is far better than our word-level model. 
+
+Bpe-5k model: These predictions have the best bleu score out of the three models. In our opinion, they look pretty similar to the bpe-5k model predictions. There are a few minor differencees in word-choice and sentence structure, but due to our limited knowledge of italian we can't really say which one is better. ChatGPT however says that this is the best of the three models, with mostly fluent sentences, better grammar and less repetition. The model is still not perfect though, with it still generating a few odd expressions. 
+
+So in general, our expectations were met and while a model using BPE-Tokenization produced better than a model using word-level tokenization, a vocabulary size of 2000 was too small and the translation quality improved by increasing the vocabulary size to 5000.
+
+
+
+
 # MT Exercise 4: Byte Pair Encoding, Beam Search
 
 This repository is a starting point for the 4th and final exercise. As before, fork this repo to your own account and then clone it into your preferred directory.
