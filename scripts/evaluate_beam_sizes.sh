@@ -15,10 +15,11 @@ for beam in 1 2 3 5 10 15 20 25; do
     fi
 
     start=$(date +%s)
-    python -m joeynmt test "$CONFIG_FILE"
+    python -m joeynmt test "$CONFIG_FILE" --output_path "${OUTDIR}/beam${beam}"
     end=$(date +%s)
 
-    PRED_FILE="models/bpe_5k_de_it/test_predictions.txt"
+    PRED_FILE="${OUTDIR}/beam${beam}.test"  # this is where test predictions will be saved
+
     if [ ! -f "$PRED_FILE" ]; then
         echo "⚠️  No $PRED_FILE found. Skipping BLEU eval."
         continue
@@ -31,4 +32,3 @@ for beam in 1 2 3 5 10 15 20 25; do
     sacrebleu "$REF" -i "$OUTFILE" -m bleu
     echo "---------------------------------------------"
 done
-
