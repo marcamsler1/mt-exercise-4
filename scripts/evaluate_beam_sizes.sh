@@ -18,11 +18,13 @@ for beam in 1 2 3 5 10 15 20 25; do
     python -m joeynmt test "$CONFIG_FILE"
     end=$(date +%s)
 
-    OUTFILE="$OUTDIR/hyp_beam${beam}.txt"
-    if [ ! -f "$OUTFILE" ]; then
-        echo "⚠️  No $OUTFILE found. Skipping BLEU eval."
+    PRED_FILE="models/bpe_5k_de_it/test_predictions.txt"
+    if [ ! -f "$PRED_FILE" ]; then
+        echo "⚠️  No $PRED_FILE found. Skipping BLEU eval."
         continue
     fi
+
+    cp "$PRED_FILE" "$OUTFILE"
 
     echo "✅ Time: $((end - start))s"
     echo "📊 BLEU score:"
