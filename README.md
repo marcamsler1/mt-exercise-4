@@ -10,9 +10,9 @@ To learn a BPE model, we used the scripts in the scripts/learn_bpe folder.
 
 Finally, we created a separate config and training script file to train each model:
 
-  ./scripts/train_word_level.sh
-  ./scripts/train_bpe_2k.sh
-  ./scripts/train_bpe_5k.sh
+      ./scripts/train_word_level.sh
+      ./scripts/train_bpe_2k.sh
+      ./scripts/train_bpe_5k.sh
 
 We trained a model that used a word-level tokenizer and a model that used BPE-Tokenization with a vocabulary size of 2000. We then wanted to see how much of a positive impact on translation quality a larger vocabulary has and trained the third model using BPE-Tokenization with a vocabulary size of 5000. These are the results:
 
@@ -48,13 +48,13 @@ We had a lot of trouble with generating the translations using different beam si
 
 We ran the test evaluations with different beam sizes by running:
 
-  ./scripts/evaluate_beam_sizes.sh
+      ./scripts/evaluate_beam_sizes.sh
 
 This script calls 10 different config files from the configs/configs_beam_size folder (which each have different beam sizes) and prints the time taken and BLEU score to the terminal.
 
 To plot the values, run from the beam_eval_results folder:
 
-  python beam_search_evaluation.py
+      python beam_search_evaluation.py
 
 ![bleu_scores](https://github.com/user-attachments/assets/7756a163-68a8-4234-a8e7-2fa2eca2f414)
 ![time_taken](https://github.com/user-attachments/assets/17b7b667-5bfb-48b8-bf3d-5f514d4e7bef)
