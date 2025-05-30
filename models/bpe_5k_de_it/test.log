@@ -1,0 +1,1213 @@
+2025-05-30 12:22:48,884 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 12:22:48,884 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 12:22:48,895 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:22:48,895 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:22:48,895 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 12:22:49,102 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 12:22:49,105 - INFO - joeynmt.data - Loading test set...
+2025-05-30 12:22:49,107 - INFO - joeynmt.data - Data loaded.
+2025-05-30 12:22:49,107 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 12:22:49,107 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:22:49,108 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:22:49,108 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:22:49,108 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:22:49,108 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 12:22:49,108 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 12:22:49,108 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 12:22:49,203 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 12:22:49,454 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 12:22:49,469 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 12:22:49,488 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 12:22:49,488 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:22:58,489 - INFO - joeynmt.prediction - Evaluation result (greedy) , generation: 8.9885[sec], evaluation: 0.0000[sec]
+2025-05-30 12:22:58,490 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 12:22:58,490 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:23:08,088 - INFO - joeynmt.prediction - Evaluation result (greedy) , generation: 9.5830[sec], evaluation: 0.0000[sec]
+2025-05-30 12:23:13,349 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 12:23:13,350 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 12:23:13,362 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:23:13,363 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:23:13,363 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 12:23:13,562 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 12:23:13,566 - INFO - joeynmt.data - Loading test set...
+2025-05-30 12:23:13,570 - INFO - joeynmt.data - Data loaded.
+2025-05-30 12:23:13,570 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 12:23:13,570 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:23:13,570 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:23:13,570 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:23:13,570 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:23:13,570 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 12:23:13,571 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 12:23:13,571 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 12:23:13,668 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 12:23:13,942 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 12:23:13,961 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 12:23:13,979 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 12:23:13,979 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=2, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:28:57,908 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 12:28:57,909 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 12:28:57,921 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:28:57,921 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:28:57,921 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 12:28:58,120 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 12:28:58,125 - INFO - joeynmt.data - Loading test set...
+2025-05-30 12:28:58,130 - INFO - joeynmt.data - Data loaded.
+2025-05-30 12:28:58,130 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 12:28:58,130 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:28:58,130 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:28:58,130 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:28:58,130 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:28:58,130 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 12:28:58,130 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 12:28:58,130 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 12:28:58,225 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 12:28:58,504 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 12:28:58,524 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 12:28:58,546 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 12:28:58,546 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:29:07,239 - INFO - joeynmt.prediction - Evaluation result (greedy) , generation: 8.6825[sec], evaluation: 0.0000[sec]
+2025-05-30 12:29:07,240 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 12:29:07,240 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:29:16,401 - INFO - joeynmt.prediction - Evaluation result (greedy) , generation: 9.1521[sec], evaluation: 0.0000[sec]
+2025-05-30 12:29:20,242 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 12:29:20,242 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 12:29:20,253 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:29:20,253 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:29:20,253 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 12:29:20,460 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 12:29:20,463 - INFO - joeynmt.data - Loading test set...
+2025-05-30 12:29:20,465 - INFO - joeynmt.data - Data loaded.
+2025-05-30 12:29:20,465 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 12:29:20,466 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:29:20,466 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:29:20,466 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:29:20,466 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:29:20,466 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 12:29:20,466 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 12:29:20,466 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 12:29:20,543 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 12:29:20,793 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 12:29:20,811 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 12:29:20,827 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 12:29:20,827 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=2, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:29:28,776 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 7.9433[sec], evaluation: 0.0000[sec]
+2025-05-30 12:29:28,776 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 12:29:28,776 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=2, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:32:32,772 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 12:32:32,772 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 12:32:32,785 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:32:32,785 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:32:32,785 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 12:32:32,983 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 12:32:32,988 - INFO - joeynmt.data - Loading test set...
+2025-05-30 12:32:32,992 - INFO - joeynmt.data - Data loaded.
+2025-05-30 12:32:32,992 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 12:32:32,992 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:32:32,992 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:32:32,992 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:32:32,992 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:32:32,992 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 12:32:32,992 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 12:32:32,992 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 12:32:33,084 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 12:32:33,357 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 12:32:33,375 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 12:32:33,398 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 12:32:33,399 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:32:42,038 - INFO - joeynmt.prediction - Evaluation result (greedy) , generation: 8.6316[sec], evaluation: 0.0000[sec]
+2025-05-30 12:32:42,039 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 12:32:42,039 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:32:51,443 - INFO - joeynmt.prediction - Evaluation result (greedy) , generation: 9.3898[sec], evaluation: 0.0000[sec]
+2025-05-30 12:32:55,492 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 12:32:55,492 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 12:32:55,502 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:32:55,502 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:32:55,502 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 12:32:55,705 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 12:32:55,707 - INFO - joeynmt.data - Loading test set...
+2025-05-30 12:32:55,710 - INFO - joeynmt.data - Data loaded.
+2025-05-30 12:32:55,710 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 12:32:55,710 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:32:55,710 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:32:55,710 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:32:55,710 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:32:55,711 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 12:32:55,711 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 12:32:55,711 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 12:32:55,791 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 12:32:56,023 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 12:32:56,035 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 12:32:56,044 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 12:32:56,044 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=2, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:33:03,464 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 7.4142[sec], evaluation: 0.0000[sec]
+2025-05-30 12:33:03,464 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 12:33:03,464 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=2, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:33:12,564 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 9.0924[sec], evaluation: 0.0000[sec]
+2025-05-30 12:33:16,290 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 12:33:16,291 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 12:33:16,301 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:33:16,301 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:33:16,301 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 12:33:16,510 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 12:33:16,512 - INFO - joeynmt.data - Loading test set...
+2025-05-30 12:33:16,515 - INFO - joeynmt.data - Data loaded.
+2025-05-30 12:33:16,515 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 12:33:16,515 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:33:16,515 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:33:16,515 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:33:16,515 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:33:16,515 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 12:33:16,516 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 12:33:16,516 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 12:33:16,597 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 12:33:16,824 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 12:33:16,836 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 12:33:16,845 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 12:33:16,845 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 12:33:16,846 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=3, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:33:25,947 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 9.0957[sec], evaluation: 0.0000[sec]
+2025-05-30 12:33:25,947 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 12:33:25,947 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 12:33:25,947 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=3, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:33:37,777 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 11.8177[sec], evaluation: 0.0000[sec]
+2025-05-30 12:33:41,785 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 12:33:41,785 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 12:33:41,792 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:33:41,793 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:33:41,793 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 12:33:41,920 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 12:33:41,922 - INFO - joeynmt.data - Loading test set...
+2025-05-30 12:33:41,925 - INFO - joeynmt.data - Data loaded.
+2025-05-30 12:33:41,925 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 12:33:41,925 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:33:41,925 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:33:41,925 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:33:41,925 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:33:41,925 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 12:33:41,925 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 12:33:41,925 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 12:33:41,984 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 12:33:42,178 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 12:33:42,189 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 12:33:42,197 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 12:33:42,197 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 12:33:42,197 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=5, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:33:53,053 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 10.8513[sec], evaluation: 0.0000[sec]
+2025-05-30 12:33:53,053 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 12:33:53,053 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 12:33:53,053 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=5, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:34:08,296 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 15.2351[sec], evaluation: 0.0000[sec]
+2025-05-30 12:34:11,706 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 12:34:11,706 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 12:34:11,713 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:34:11,713 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:34:11,713 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 12:34:11,841 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 12:34:11,844 - INFO - joeynmt.data - Loading test set...
+2025-05-30 12:34:11,846 - INFO - joeynmt.data - Data loaded.
+2025-05-30 12:34:11,846 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 12:34:11,846 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:34:11,846 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:34:11,846 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:34:11,846 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:34:11,846 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 12:34:11,846 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 12:34:11,846 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 12:34:11,909 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 12:34:12,106 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 12:34:12,116 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 12:34:12,123 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 12:34:12,123 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 12:34:12,123 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=10, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:34:34,816 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 22.6856[sec], evaluation: 0.0000[sec]
+2025-05-30 12:34:34,816 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 12:34:34,816 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 12:34:34,816 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=10, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:35:13,378 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 38.5550[sec], evaluation: 0.0000[sec]
+2025-05-30 12:35:17,795 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 12:35:17,796 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 12:35:17,806 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:35:17,807 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:35:17,807 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 12:35:18,014 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 12:35:18,017 - INFO - joeynmt.data - Loading test set...
+2025-05-30 12:35:18,020 - INFO - joeynmt.data - Data loaded.
+2025-05-30 12:35:18,020 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 12:35:18,020 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:35:18,020 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:35:18,020 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:35:18,020 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:35:18,020 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 12:35:18,020 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 12:35:18,020 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 12:35:18,101 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 12:35:18,327 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 12:35:18,342 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 12:35:18,352 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 12:35:18,352 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 12:35:18,352 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=15, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:35:53,487 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 35.1283[sec], evaluation: 0.0000[sec]
+2025-05-30 12:35:53,488 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 12:35:53,488 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 12:35:53,488 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=15, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:36:48,033 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 54.5378[sec], evaluation: 0.0000[sec]
+2025-05-30 12:36:54,030 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 12:36:54,030 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 12:36:54,043 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:36:54,043 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:36:54,043 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 12:36:54,252 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 12:36:54,258 - INFO - joeynmt.data - Loading test set...
+2025-05-30 12:36:54,263 - INFO - joeynmt.data - Data loaded.
+2025-05-30 12:36:54,263 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 12:36:54,263 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:36:54,263 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:36:54,263 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:36:54,264 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:36:54,264 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 12:36:54,264 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 12:36:54,264 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 12:36:54,366 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 12:36:54,641 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 12:36:54,660 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 12:36:54,680 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 12:36:54,680 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 12:36:54,680 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=20, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:37:48,537 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 53.8495[sec], evaluation: 0.0000[sec]
+2025-05-30 12:37:48,537 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 12:37:48,537 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 12:37:48,537 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=20, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:39:06,312 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 77.7685[sec], evaluation: 0.0000[sec]
+2025-05-30 12:39:10,584 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 12:39:10,584 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 12:39:10,595 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:39:10,595 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:39:10,595 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 12:39:10,791 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 12:39:10,794 - INFO - joeynmt.data - Loading test set...
+2025-05-30 12:39:10,797 - INFO - joeynmt.data - Data loaded.
+2025-05-30 12:39:10,797 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 12:39:10,797 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:39:10,797 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:39:10,797 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:39:10,797 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:39:10,797 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 12:39:10,797 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 12:39:10,797 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 12:39:10,879 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 12:39:11,114 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 12:39:11,129 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 12:39:11,138 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 12:39:11,139 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 12:39:11,139 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=25, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:40:19,893 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 68.7500[sec], evaluation: 0.0000[sec]
+2025-05-30 12:40:19,893 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 12:40:19,894 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 12:40:19,894 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=25, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:42:09,249 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 109.3486[sec], evaluation: 0.0000[sec]
+2025-05-30 12:55:49,883 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 12:55:49,884 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 12:55:49,895 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:55:49,895 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 12:55:49,895 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 12:55:50,103 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 12:55:50,105 - INFO - joeynmt.data - Loading test set...
+2025-05-30 12:55:50,108 - INFO - joeynmt.data - Data loaded.
+2025-05-30 12:55:50,108 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 12:55:50,108 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:55:50,109 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 12:55:50,109 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:55:50,109 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 12:55:50,109 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 12:55:50,109 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 12:55:50,109 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 12:55:50,202 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 12:55:50,477 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 12:55:50,500 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 12:55:50,523 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 12:55:50,523 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:55:59,215 - INFO - joeynmt.prediction - Evaluation result (greedy) , generation: 8.6838[sec], evaluation: 0.0000[sec]
+2025-05-30 12:55:59,215 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 12:55:59,215 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 12:56:08,295 - INFO - joeynmt.prediction - Evaluation result (greedy) , generation: 9.0697[sec], evaluation: 0.0000[sec]
+2025-05-30 16:47:11,878 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 16:47:11,879 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 16:47:11,891 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:47:11,891 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:47:11,891 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 16:47:12,105 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 16:47:12,109 - INFO - joeynmt.data - Loading test set...
+2025-05-30 16:47:12,113 - INFO - joeynmt.data - Data loaded.
+2025-05-30 16:47:12,113 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 16:47:12,113 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:47:12,113 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:47:12,113 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:47:12,114 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:47:12,114 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 16:47:12,114 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 16:47:12,114 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 16:47:12,209 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 16:47:12,479 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 16:47:12,497 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 16:47:12,522 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 16:47:12,522 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:47:21,474 - INFO - joeynmt.prediction - Evaluation result (greedy) , generation: 8.9388[sec], evaluation: 0.0000[sec]
+2025-05-30 16:47:21,475 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 16:47:21,475 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:47:30,613 - INFO - joeynmt.prediction - Evaluation result (greedy) , generation: 9.1277[sec], evaluation: 0.0000[sec]
+2025-05-30 16:47:36,043 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 16:47:36,044 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 16:47:36,056 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:47:36,057 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:47:36,057 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 16:47:36,256 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 16:47:36,260 - INFO - joeynmt.data - Loading test set...
+2025-05-30 16:47:36,266 - INFO - joeynmt.data - Data loaded.
+2025-05-30 16:47:36,266 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 16:47:36,266 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:47:36,266 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:47:36,266 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:47:36,266 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:47:36,266 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 16:47:36,267 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 16:47:36,267 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 16:47:36,360 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 16:47:36,643 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 16:47:36,663 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 16:47:36,682 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 16:47:36,682 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=2, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:47:44,717 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 8.0260[sec], evaluation: 0.0000[sec]
+2025-05-30 16:47:44,717 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 16:47:44,717 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=2, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:47:54,503 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 9.7725[sec], evaluation: 0.0000[sec]
+2025-05-30 16:47:58,471 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 16:47:58,471 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 16:47:58,482 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:47:58,482 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:47:58,482 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 16:47:58,693 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 16:47:58,696 - INFO - joeynmt.data - Loading test set...
+2025-05-30 16:47:58,699 - INFO - joeynmt.data - Data loaded.
+2025-05-30 16:47:58,699 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 16:47:58,699 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:47:58,699 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:47:58,699 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:47:58,699 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:47:58,699 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 16:47:58,699 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 16:47:58,699 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 16:47:58,786 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 16:47:59,011 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 16:47:59,023 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 16:47:59,031 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 16:47:59,032 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:47:59,032 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=3, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:48:08,310 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 9.2709[sec], evaluation: 0.0000[sec]
+2025-05-30 16:48:08,310 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 16:48:08,310 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:48:08,310 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=3, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:48:20,595 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 12.2770[sec], evaluation: 0.0000[sec]
+2025-05-30 16:48:24,853 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 16:48:24,854 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 16:48:24,865 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:48:24,865 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:48:24,865 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 16:48:25,092 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 16:48:25,095 - INFO - joeynmt.data - Loading test set...
+2025-05-30 16:48:25,098 - INFO - joeynmt.data - Data loaded.
+2025-05-30 16:48:25,098 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 16:48:25,099 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:48:25,099 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:48:25,099 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:48:25,099 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:48:25,099 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 16:48:25,099 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 16:48:25,099 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 16:48:25,180 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 16:48:25,409 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 16:48:25,421 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 16:48:25,431 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 16:48:25,431 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:48:25,431 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=5, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:48:38,928 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 13.4891[sec], evaluation: 0.0000[sec]
+2025-05-30 16:48:38,928 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 16:48:38,929 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:48:38,929 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=5, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:48:56,431 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 17.4916[sec], evaluation: 0.0000[sec]
+2025-05-30 16:49:02,310 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 16:49:02,311 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 16:49:02,323 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:49:02,323 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:49:02,323 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 16:49:02,534 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 16:49:02,538 - INFO - joeynmt.data - Loading test set...
+2025-05-30 16:49:02,543 - INFO - joeynmt.data - Data loaded.
+2025-05-30 16:49:02,543 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 16:49:02,543 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:49:02,543 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:49:02,543 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:49:02,543 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:49:02,543 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 16:49:02,543 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 16:49:02,543 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 16:49:02,642 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 16:49:02,906 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 16:49:02,925 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 16:49:02,943 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 16:49:02,943 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:49:02,943 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=10, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:49:28,354 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 25.4048[sec], evaluation: 0.0000[sec]
+2025-05-30 16:49:28,354 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 16:49:28,354 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:49:28,354 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=10, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:50:03,268 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 34.9031[sec], evaluation: 0.0000[sec]
+2025-05-30 16:50:09,512 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 16:50:09,513 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 16:50:09,525 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:50:09,526 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:50:09,526 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 16:50:09,733 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 16:50:09,738 - INFO - joeynmt.data - Loading test set...
+2025-05-30 16:50:09,743 - INFO - joeynmt.data - Data loaded.
+2025-05-30 16:50:09,743 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 16:50:09,743 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:50:09,743 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:50:09,743 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:50:09,743 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:50:09,743 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 16:50:09,743 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 16:50:09,743 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 16:50:09,837 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 16:50:10,121 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 16:50:10,139 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 16:50:10,163 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 16:50:10,163 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:50:10,163 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=15, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:50:48,061 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 37.8923[sec], evaluation: 0.0000[sec]
+2025-05-30 16:50:48,061 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 16:50:48,061 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:50:48,061 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=15, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:54:14,804 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 16:54:14,804 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 16:54:14,816 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:54:14,817 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:54:14,817 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 16:54:15,025 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 16:54:15,030 - INFO - joeynmt.data - Loading test set...
+2025-05-30 16:54:15,035 - INFO - joeynmt.data - Data loaded.
+2025-05-30 16:54:15,035 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 16:54:15,035 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:54:15,035 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:54:15,035 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:54:15,035 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:54:15,035 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 16:54:15,036 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 16:54:15,036 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 16:54:15,129 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 16:54:15,404 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 16:54:15,427 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 16:54:15,452 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 16:54:15,452 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 16:54:15,452 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:54:24,718 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 16:54:24,718 - INFO - joeynmt.prediction - Evaluation result (greedy) bleu:   8.58, generation: 8.9136[sec], evaluation: 0.3398[sec]
+2025-05-30 16:54:24,718 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 16:54:24,718 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 16:54:24,718 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:54:34,092 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 16:54:34,092 - INFO - joeynmt.prediction - Evaluation result (greedy) bleu:   9.00, generation: 9.2387[sec], evaluation: 0.1260[sec]
+2025-05-30 16:54:39,455 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 16:54:39,456 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 16:54:39,468 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:54:39,468 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:54:39,468 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 16:54:39,667 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 16:54:39,672 - INFO - joeynmt.data - Loading test set...
+2025-05-30 16:54:39,678 - INFO - joeynmt.data - Data loaded.
+2025-05-30 16:54:39,678 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 16:54:39,678 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:54:39,678 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:54:39,678 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:54:39,678 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:54:39,678 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 16:54:39,678 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 16:54:39,678 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 16:54:39,768 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 16:54:40,050 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 16:54:40,069 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 16:54:40,086 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 16:54:40,086 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=2, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:54:47,524 - INFO - joeynmt.prediction - Evaluation result (beam search) , generation: 7.4291[sec], evaluation: 0.0000[sec]
+2025-05-30 16:54:47,524 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 16:54:47,524 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=2, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:57:02,653 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 16:57:02,653 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 16:57:02,665 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:57:02,665 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:57:02,665 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 16:57:02,886 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 16:57:02,890 - INFO - joeynmt.data - Loading test set...
+2025-05-30 16:57:02,894 - INFO - joeynmt.data - Data loaded.
+2025-05-30 16:57:02,894 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 16:57:02,895 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:57:02,895 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:57:02,895 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:57:02,895 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:57:02,895 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 16:57:02,895 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 16:57:02,895 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 16:57:03,002 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 16:57:03,288 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 16:57:03,306 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 16:57:03,332 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 16:57:03,332 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 16:57:03,332 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:57:12,271 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 16:57:12,271 - INFO - joeynmt.prediction - Evaluation result (greedy) bleu:   8.58, generation: 8.7002[sec], evaluation: 0.2264[sec]
+2025-05-30 16:57:12,271 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 16:57:12,271 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 16:57:12,271 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:57:21,875 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 16:57:21,876 - INFO - joeynmt.prediction - Evaluation result (greedy) bleu:   9.00, generation: 9.3892[sec], evaluation: 0.2000[sec]
+2025-05-30 16:57:26,008 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 16:57:26,009 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 16:57:26,019 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:57:26,019 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:57:26,019 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 16:57:26,230 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 16:57:26,232 - INFO - joeynmt.data - Loading test set...
+2025-05-30 16:57:26,235 - INFO - joeynmt.data - Data loaded.
+2025-05-30 16:57:26,235 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 16:57:26,235 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:57:26,235 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:57:26,235 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:57:26,235 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:57:26,235 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 16:57:26,235 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 16:57:26,235 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 16:57:26,316 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 16:57:26,544 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 16:57:26,556 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 16:57:26,565 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 16:57:26,566 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 16:57:26,566 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=2, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:57:34,447 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 16:57:34,448 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  10.86, generation: 7.6649[sec], evaluation: 0.2091[sec]
+2025-05-30 16:57:34,448 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 16:57:34,448 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 16:57:34,448 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=2, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:57:44,976 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 16:57:44,976 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  11.52, generation: 10.4041[sec], evaluation: 0.1160[sec]
+2025-05-30 16:57:48,929 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 16:57:48,929 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 16:57:48,940 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:57:48,940 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:57:48,940 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 16:57:49,145 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 16:57:49,148 - INFO - joeynmt.data - Loading test set...
+2025-05-30 16:57:49,151 - INFO - joeynmt.data - Data loaded.
+2025-05-30 16:57:49,151 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 16:57:49,151 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:57:49,151 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:57:49,151 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:57:49,151 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:57:49,151 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 16:57:49,151 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 16:57:49,152 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 16:57:49,229 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 16:57:49,464 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 16:57:49,475 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 16:57:49,484 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 16:57:49,484 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 16:57:49,484 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:57:49,484 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=3, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:57:59,046 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 16:57:59,046 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  10.46, generation: 9.3508[sec], evaluation: 0.2036[sec]
+2025-05-30 16:57:59,046 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 16:57:59,046 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 16:57:59,046 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:57:59,046 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=3, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:58:11,599 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 16:58:11,599 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  11.13, generation: 12.3699[sec], evaluation: 0.1722[sec]
+2025-05-30 16:58:15,841 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 16:58:15,841 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 16:58:15,852 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:58:15,852 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:58:15,852 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 16:58:16,063 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 16:58:16,066 - INFO - joeynmt.data - Loading test set...
+2025-05-30 16:58:16,069 - INFO - joeynmt.data - Data loaded.
+2025-05-30 16:58:16,069 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 16:58:16,070 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:58:16,070 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:58:16,070 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:58:16,070 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:58:16,070 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 16:58:16,070 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 16:58:16,070 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 16:58:16,147 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 16:58:16,378 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 16:58:16,390 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 16:58:16,399 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 16:58:16,399 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 16:58:16,399 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:58:16,399 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=4, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:58:28,680 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 16:58:28,680 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  10.44, generation: 12.1604[sec], evaluation: 0.1130[sec]
+2025-05-30 16:58:28,680 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 16:58:28,681 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 16:58:28,681 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:58:28,681 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=4, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:58:43,349 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 16:58:43,350 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  10.96, generation: 14.4869[sec], evaluation: 0.1707[sec]
+2025-05-30 16:58:46,713 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 16:58:46,713 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 16:58:46,720 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:58:46,720 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:58:46,720 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 16:58:46,849 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 16:58:46,851 - INFO - joeynmt.data - Loading test set...
+2025-05-30 16:58:46,853 - INFO - joeynmt.data - Data loaded.
+2025-05-30 16:58:46,853 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 16:58:46,853 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:58:46,853 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:58:46,853 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:58:46,853 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:58:46,853 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 16:58:46,853 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 16:58:46,853 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 16:58:46,910 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 16:58:47,101 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 16:58:47,111 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 16:58:47,118 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 16:58:47,119 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 16:58:47,119 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:58:47,119 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=5, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:58:57,915 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 16:58:57,915 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  10.41, generation: 10.7242[sec], evaluation: 0.0677[sec]
+2025-05-30 16:58:57,915 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 16:58:57,915 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 16:58:57,915 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:58:57,915 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=5, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:59:13,219 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 16:59:13,219 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  10.71, generation: 15.1913[sec], evaluation: 0.1056[sec]
+2025-05-30 16:59:17,280 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 16:59:17,280 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 16:59:17,290 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:59:17,290 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 16:59:17,291 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 16:59:17,492 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 16:59:17,495 - INFO - joeynmt.data - Loading test set...
+2025-05-30 16:59:17,498 - INFO - joeynmt.data - Data loaded.
+2025-05-30 16:59:17,498 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 16:59:17,498 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:59:17,498 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 16:59:17,498 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:59:17,498 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 16:59:17,498 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 16:59:17,498 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 16:59:17,498 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 16:59:17,578 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 16:59:17,809 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 16:59:17,821 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 16:59:17,830 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 16:59:17,830 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 16:59:17,830 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:59:17,830 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=7, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 16:59:36,951 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 16:59:36,952 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:   9.81, generation: 19.0030[sec], evaluation: 0.1116[sec]
+2025-05-30 16:59:36,952 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 16:59:36,952 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 16:59:36,952 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 16:59:36,952 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=7, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:00:37,076 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 17:00:37,077 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 17:00:37,090 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:00:37,090 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:00:37,090 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 17:00:37,299 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 17:00:37,304 - INFO - joeynmt.data - Loading test set...
+2025-05-30 17:00:37,310 - INFO - joeynmt.data - Data loaded.
+2025-05-30 17:00:37,310 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 17:00:37,310 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:00:37,310 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:00:37,310 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:00:37,310 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:00:37,311 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 17:00:37,311 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 17:00:37,311 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 17:00:37,412 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 17:00:37,690 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 17:00:37,713 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 17:00:37,734 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 17:00:37,734 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:00:37,734 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:00:46,625 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:00:46,625 - INFO - joeynmt.prediction - Evaluation result (greedy) bleu:   8.58, generation: 8.7253[sec], evaluation: 0.1578[sec]
+2025-05-30 17:00:46,625 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 17:00:46,625 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:00:46,625 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Greedy decoding with min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:00:55,758 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:00:55,758 - INFO - joeynmt.prediction - Evaluation result (greedy) bleu:   9.00, generation: 8.9995[sec], evaluation: 0.1243[sec]
+2025-05-30 17:00:59,458 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 17:00:59,458 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 17:00:59,469 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:00:59,469 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:00:59,469 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 17:00:59,677 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 17:00:59,679 - INFO - joeynmt.data - Loading test set...
+2025-05-30 17:00:59,682 - INFO - joeynmt.data - Data loaded.
+2025-05-30 17:00:59,682 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 17:00:59,682 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:00:59,682 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:00:59,682 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:00:59,682 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:00:59,682 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 17:00:59,682 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 17:00:59,682 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 17:00:59,767 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 17:00:59,992 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 17:01:00,004 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 17:01:00,013 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 17:01:00,013 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:01:00,014 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=2, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:01:06,871 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:01:06,871 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  10.86, generation: 6.7135[sec], evaluation: 0.1386[sec]
+2025-05-30 17:01:06,871 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 17:01:06,871 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:01:06,871 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=2, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:01:16,136 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:01:16,136 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  11.52, generation: 9.0736[sec], evaluation: 0.1798[sec]
+2025-05-30 17:01:20,005 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 17:01:20,005 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 17:01:20,015 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:01:20,015 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:01:20,015 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 17:01:20,216 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 17:01:20,219 - INFO - joeynmt.data - Loading test set...
+2025-05-30 17:01:20,222 - INFO - joeynmt.data - Data loaded.
+2025-05-30 17:01:20,222 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 17:01:20,222 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:01:20,222 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:01:20,222 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:01:20,222 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:01:20,222 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 17:01:20,222 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 17:01:20,222 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 17:01:20,302 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 17:01:20,537 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 17:01:20,551 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 17:01:20,560 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 17:01:20,560 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:01:20,560 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:01:20,560 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=3, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:01:29,108 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:01:29,108 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  10.46, generation: 8.3977[sec], evaluation: 0.1454[sec]
+2025-05-30 17:01:29,109 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 17:01:29,109 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:01:29,109 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:01:29,109 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=3, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:01:40,941 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:01:40,941 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  11.13, generation: 11.7170[sec], evaluation: 0.1088[sec]
+2025-05-30 17:01:44,672 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 17:01:44,672 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 17:01:44,679 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:01:44,679 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:01:44,679 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 17:01:44,808 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 17:01:44,810 - INFO - joeynmt.data - Loading test set...
+2025-05-30 17:01:44,812 - INFO - joeynmt.data - Data loaded.
+2025-05-30 17:01:44,812 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 17:01:44,813 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:01:44,813 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:01:44,813 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:01:44,813 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:01:44,813 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 17:01:44,813 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 17:01:44,813 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 17:01:44,886 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 17:01:45,112 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 17:01:45,123 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 17:01:45,132 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 17:01:45,132 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:01:45,132 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:01:45,132 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=4, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:01:55,118 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:01:55,118 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  10.44, generation: 9.9127[sec], evaluation: 0.0678[sec]
+2025-05-30 17:01:55,118 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 17:01:55,118 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:01:55,118 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:01:55,118 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=4, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:02:07,857 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:02:07,857 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  10.96, generation: 12.6249[sec], evaluation: 0.1074[sec]
+2025-05-30 17:02:11,700 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 17:02:11,700 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 17:02:11,710 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:02:11,711 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:02:11,711 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 17:02:11,918 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 17:02:11,921 - INFO - joeynmt.data - Loading test set...
+2025-05-30 17:02:11,923 - INFO - joeynmt.data - Data loaded.
+2025-05-30 17:02:11,924 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 17:02:11,924 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:02:11,924 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:02:11,924 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:02:11,924 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:02:11,924 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 17:02:11,924 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 17:02:11,924 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 17:02:12,001 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 17:02:12,231 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 17:02:12,243 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 17:02:12,252 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 17:02:12,252 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:02:12,252 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:02:12,252 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=5, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:02:25,836 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:02:25,836 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  10.41, generation: 13.5120[sec], evaluation: 0.0678[sec]
+2025-05-30 17:02:25,836 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 17:02:25,836 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:02:25,836 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:02:25,836 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=5, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:02:41,475 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:02:41,475 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  10.71, generation: 15.5261[sec], evaluation: 0.1058[sec]
+2025-05-30 17:02:45,149 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 17:02:45,149 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 17:02:45,156 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:02:45,156 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:02:45,156 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 17:02:45,280 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 17:02:45,283 - INFO - joeynmt.data - Loading test set...
+2025-05-30 17:02:45,284 - INFO - joeynmt.data - Data loaded.
+2025-05-30 17:02:45,284 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 17:02:45,284 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:02:45,284 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:02:45,285 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:02:45,285 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:02:45,285 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 17:02:45,285 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 17:02:45,285 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 17:02:45,360 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 17:02:45,581 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 17:02:45,593 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 17:02:45,602 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 17:02:45,603 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:02:45,603 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:02:45,603 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=7, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:03:03,670 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:03:03,670 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:   9.81, generation: 17.9485[sec], evaluation: 0.1118[sec]
+2025-05-30 17:03:03,671 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 17:03:03,671 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:03:03,671 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:03:03,671 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=7, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:03:24,832 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:03:24,832 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  10.51, generation: 21.0498[sec], evaluation: 0.1043[sec]
+2025-05-30 17:03:29,013 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 17:03:29,014 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 17:03:29,025 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:03:29,025 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:03:29,026 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 17:03:29,233 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 17:03:29,235 - INFO - joeynmt.data - Loading test set...
+2025-05-30 17:03:29,238 - INFO - joeynmt.data - Data loaded.
+2025-05-30 17:03:29,238 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 17:03:29,238 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:03:29,238 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:03:29,238 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:03:29,238 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:03:29,238 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 17:03:29,238 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 17:03:29,238 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 17:03:29,325 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 17:03:29,564 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 17:03:29,576 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 17:03:29,585 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 17:03:29,585 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:03:29,585 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:03:29,585 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=10, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:03:51,115 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:03:51,115 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:   9.67, generation: 21.4603[sec], evaluation: 0.0650[sec]
+2025-05-30 17:03:51,115 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 17:03:51,115 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:03:51,115 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:03:51,115 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=10, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:04:24,472 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:04:24,472 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:  10.02, generation: 33.2457[sec], evaluation: 0.1040[sec]
+2025-05-30 17:04:30,680 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 17:04:30,681 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 17:04:30,695 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:04:30,695 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:04:30,695 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 17:04:30,905 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 17:04:30,911 - INFO - joeynmt.data - Loading test set...
+2025-05-30 17:04:30,918 - INFO - joeynmt.data - Data loaded.
+2025-05-30 17:04:30,918 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 17:04:30,918 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:04:30,918 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:04:30,918 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:04:30,918 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:04:30,918 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 17:04:30,918 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 17:04:30,919 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 17:04:31,015 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 17:04:31,312 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 17:04:31,337 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 17:04:31,361 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 17:04:31,361 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:04:31,361 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:04:31,361 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=15, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:05:10,854 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:05:10,854 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:   9.18, generation: 39.4188[sec], evaluation: 0.0682[sec]
+2025-05-30 17:05:10,854 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 17:05:10,854 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:05:10,854 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:05:10,854 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=15, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:06:04,460 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:06:04,461 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:   9.41, generation: 53.4995[sec], evaluation: 0.1007[sec]
+2025-05-30 17:06:10,759 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 17:06:10,759 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 17:06:10,773 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:06:10,773 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:06:10,773 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 17:06:10,982 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 17:06:10,989 - INFO - joeynmt.data - Loading test set...
+2025-05-30 17:06:10,994 - INFO - joeynmt.data - Data loaded.
+2025-05-30 17:06:10,994 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 17:06:10,995 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:06:10,995 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:06:10,995 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:06:10,995 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:06:10,995 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 17:06:10,995 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 17:06:10,995 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 17:06:11,086 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 17:06:11,374 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 17:06:11,397 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 17:06:11,420 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 17:06:11,420 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:06:11,421 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:06:11,421 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=20, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:07:11,079 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:07:11,079 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:   9.04, generation: 59.5824[sec], evaluation: 0.0697[sec]
+2025-05-30 17:07:11,079 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 17:07:11,079 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:07:11,079 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:07:11,079 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=20, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:08:30,522 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:08:30,523 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:   9.02, generation: 79.3360[sec], evaluation: 0.1000[sec]
+2025-05-30 17:08:36,763 - INFO - root - Hello! This is Joey-NMT (version 2.2.0).
+2025-05-30 17:08:36,764 - INFO - joeynmt.data - Building tokenizer...
+2025-05-30 17:08:36,779 - INFO - joeynmt.tokenizers - de tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:08:36,779 - INFO - joeynmt.tokenizers - it tokenizer: SubwordNMTTokenizer(level=bpe, lowercase=False, normalize=False, filter_by_length=(-1, -1), pretokenizer=none, tokenizer=BPE, separator=@@, dropout=0.0)
+2025-05-30 17:08:36,779 - INFO - joeynmt.data - Building vocabulary...
+2025-05-30 17:08:36,989 - INFO - joeynmt.data - Loading dev set...
+2025-05-30 17:08:36,995 - INFO - joeynmt.data - Loading test set...
+2025-05-30 17:08:37,001 - INFO - joeynmt.data - Data loaded.
+2025-05-30 17:08:37,001 - INFO - joeynmt.data - Train dataset: None
+2025-05-30 17:08:37,002 - INFO - joeynmt.data - Valid dataset: PlaintextDataset(split=dev, len=923, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:08:37,002 - INFO - joeynmt.data -  Test dataset: PlaintextDataset(split=test, len=1567, src_lang=de, trg_lang=it, has_trg=True, random_subset=-1)
+2025-05-30 17:08:37,002 - INFO - joeynmt.data - First 10 Src tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:08:37,002 - INFO - joeynmt.data - First 10 Trg tokens: (0) <unk> (1) <pad> (2) <s> (3) </s> (4) ! (5) # (6) $ (7) % (8) &#91; (9) &#93;
+2025-05-30 17:08:37,002 - INFO - joeynmt.data - Number of unique Src tokens (vocab_size): 4992
+2025-05-30 17:08:37,002 - INFO - joeynmt.data - Number of unique Trg tokens (vocab_size): 4992
+2025-05-30 17:08:37,002 - INFO - joeynmt.model - Building an encoder-decoder model...
+2025-05-30 17:08:37,107 - INFO - joeynmt.model - Enc-dec model built.
+2025-05-30 17:08:37,383 - INFO - joeynmt.helpers - Load model from /home/user/amsler/mt-exercise-4/models/bpe_5k_de_it/best.ckpt.
+2025-05-30 17:08:37,407 - INFO - joeynmt.prediction - Model(
+	encoder=TransformerEncoder(num_layers=4, num_heads=2, alpha=1.0, layer_norm="pre", activation=ReLU()),
+	decoder=TransformerDecoder(num_layers=1, num_heads=2, alpha=1.0, layer_norm="post", activation=ReLU()),
+	src_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	trg_embed=Embeddings(embedding_dim=256, vocab_size=4992),
+	loss_function=None)
+2025-05-30 17:08:37,428 - INFO - joeynmt.prediction - Decoding on dev set...
+2025-05-30 17:08:37,428 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:08:37,428 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:08:37,428 - INFO - joeynmt.prediction - Predicting 923 example(s)... (Beam search with beam_size=25, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:09:49,030 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:09:49,031 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:   8.46, generation: 71.5324[sec], evaluation: 0.0651[sec]
+2025-05-30 17:09:49,031 - INFO - joeynmt.prediction - Decoding on test set...
+2025-05-30 17:09:49,031 - WARNING - joeynmt.helpers - `eval_metric` option is obsolete. Please use `eval_metrics`, instead.
+2025-05-30 17:09:49,031 - WARNING - joeynmt.helpers - `alpha` option is obsolete. Please use `beam_alpha`, instead.
+2025-05-30 17:09:49,031 - INFO - joeynmt.prediction - Predicting 1567 example(s)... (Beam search with beam_size=25, beam_alpha=1.0, n_best=1, min_output_length=1, max_output_length=-1, return_prob='none', generate_unk=True, repetition_penalty=-1, no_repeat_ngram_size=-1)
+2025-05-30 17:11:33,705 - INFO - joeynmt.metrics - nrefs:1|case:mixed|eff:no|tok:13a|smooth:exp|version:2.5.1
+2025-05-30 17:11:33,706 - INFO - joeynmt.prediction - Evaluation result (beam search) bleu:   8.78, generation: 104.5698[sec], evaluation: 0.0985[sec]
