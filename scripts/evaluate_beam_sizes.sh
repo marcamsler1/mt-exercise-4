@@ -16,6 +16,7 @@ for beam in 1 2 3 5 10 15 20 25; do
 
     start=$(date +%s)
     python -m joeynmt test "$CONFIG_FILE" --output_path "abc"
+    end=$(date +%s)
 
     PRED_FILE="${OUTDIR}/beam${beam}.test"  # this is where test predictions will be saved
 
