@@ -18,7 +18,8 @@ for beam in 1 2 3 5 10 15 20 25; do
 
     start=$(date +%s)
 
-    python -m joeynmt translate "$CONFIG_FILE"
+    python -m joeynmt translate "$CONFIG_FILE" --output_path "$OUTFILE"
+
 
     end=$(date +%s)
 
