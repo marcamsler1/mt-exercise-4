@@ -61,6 +61,8 @@ To plot the values, run from the beam_eval_results folder:
 
 The BLEU-Score for a beam-size of 1 is not that good in comparison to the others, because it's greedy decoding. The impact of making the beam size to 2 is huge, and this beam size leads to the best BLEU scores. In addition to this, the time taken for decoding is also the lowest at a beam size of 2. We were a bit surprised that beam sizes of 3, 4 and 5 gradually got a lower BLEU score, since we initially thought that one of those beam sizes would lead to the best score. From there on, the quality of translations further decreased with a higher beam size. At a beam size of 20, we get a similar BLEU score to a beam size of one and increasing the beam size even further just decreases translation quality even more. The time taken for decoding also increases linearly with a higher beam size, so there were no surprises there.
 
+For future experiments, we would likely choose a beam size of 3 or 4. These beam sizes didn't have the best BLEU score in this experiment, but we think that for other experiments such a beam size is better, since a size of two could might be too small in some cases, where we need to keep more diverse translations in the search space. The amount of time needed for these beam sizes is also manageable.
+
 
 
 
