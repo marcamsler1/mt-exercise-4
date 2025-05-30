@@ -4,7 +4,7 @@ This exercise was solved by Marc Amsler (marctfamsler, 22-726-206) and Nicolas B
 
 To preprocess (subsample 100k sentences and tokenize on word level) the data we used the script preprocess.py:
 
-  ./scripts/preprocess.sh
+    ./scripts/preprocess.sh
 
 To learn a BPE model, we used the scripts in the scripts/learn_bpe folder.
 
