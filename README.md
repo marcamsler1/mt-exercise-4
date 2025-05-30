@@ -44,7 +44,7 @@ So in general, our expectations were met and while a model using BPE Tokenizatio
 
 
 # Exercise 2:
-We had a lot of trouble with generating the translations using different beam sizes, because we didn't see the evaluate.sh script in the scripts folder untill the very end and tried to write our own script. In the end, we printed the evaluation scores and times to the terminal and copied the terminal output to thebeam_eval_results/evaluation_terminal_output.txt file. From there, we extracted the values by hand and wrote them to the python file which generated the plots.
+We had a lot of trouble with generating the translations using different beam sizes, because we didn't see the evaluate.sh script in the scripts folder until the very end and therefore tried to write our own script. In the end, we wrote our own script where we printed the evaluation scores and times to the terminal and copied the terminal output to thebeam_eval_results/evaluation_terminal_output.txt file. From there, we extracted the values by hand and wrote them to the python file which generated the plots.
 
 We ran the test evaluations with different beam sizes by running:
 
